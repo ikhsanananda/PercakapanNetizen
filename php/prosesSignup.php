@@ -13,13 +13,13 @@ if(isset($_POST['daftar']))
     $query=pg_query("INSERT INTO daftar_user(username, email, passwordorg, cpassword) VALUEs('$username', '$email', '$pass', '$cpass')");
 
     //apakah berhasil
-    if( $query==TRUE)
+    if($query==TRUE && $pass==$cpass)
     {
         header('Location:SignupLogin.php');
     }
     else
     {
-        die("daftar gagal");
+        die("daftar gagal atau password tidak cocok");
     }
 }
 else 
