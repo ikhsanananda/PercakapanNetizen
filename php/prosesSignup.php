@@ -15,11 +15,11 @@ if(isset($_POST['daftar']))
     //apakah berhasil
     if( $query==TRUE)
     {
-        header('Location:FavouriteNews.html');
+        header('Location:SignupLogin.php');
     }
     else
     {
-        header('Location:SignupLogin.php');
+        die("daftar gagal");
     }
 }
 else 
