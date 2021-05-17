@@ -12,7 +12,9 @@ if(isset($_POST['masuk']))
     //apakah berhasil
     if(($result['username']==$username)&&($result['passwordorg']==$pass))
     {
-        header('Location:FavouriteNews.html');
+        session_start();
+        $_SESSION['loggedin']=true;
+        header('Location:ceklogin.php');
     }
     else
     {
