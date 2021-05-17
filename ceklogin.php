@@ -3,7 +3,16 @@
 session_start();
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
 {
-    header('Location:FavouriteNews.html');
+    if(time()-$_SESSION["login_time_stamp"] >600)  
+    {
+        session_unset();
+        session_destroy();
+        header('Location:SignupLogin.php');
+    }
+    else 
+    {
+        header('Location:FavouriteNews.html');
+    }
 }
 else
 {
