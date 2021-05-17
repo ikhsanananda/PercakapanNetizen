@@ -14,6 +14,7 @@ if(isset($_POST['masuk']))
     {
         session_start();
         $_SESSION['loggedin']=true;
+        $_SESSION["login_time_stamp"] = time();
         header('Location:ceklogin.php');
     }
     else
