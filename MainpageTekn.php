@@ -86,7 +86,14 @@
                                                 session_start();
                                                 $nama_user=$_SESSION['username'];
                                                 $page=basename($_SERVER['PHP_SELF']);
-                                                $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                
+                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                $val = pg_fetch_result($pgsql, 0, 0);
+                                                if($val=='0')
+                                                {
+                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                }
                                             ?>
                                     </a>
                                 </span>
@@ -95,7 +102,7 @@
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageTekn.html">Bocoran Spesifikasi Redmi Note 10s, Meluncur di Indonesia Besok</a>
+                            <a href="MainpageTekn.php">Bocoran Spesifikasi Redmi Note 10s, Meluncur di Indonesia Besok</a>
                             <p>Melengkapi lini Redmi Note 10 dan Redmi Note 10 Pro yang sudah lebih dulu meluncur di Indonesia, Xiaomi berencana merilis ponsel Redmi Note 10s di Indonesia pada Selasa (18/5/2021) malam.
                             </p>
                             <p>Meski belum dirilis secara resmi, namun sejumlah sumber telah memprediksi spesifikasi dari Redmi Note 10s. Konon, ponsel ini akan memiliki sejumlah perbedaan aspek dari kedua saudaranya.
