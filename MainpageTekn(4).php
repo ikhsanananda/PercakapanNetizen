@@ -75,7 +75,7 @@
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 18, 2021</span>
                                 <span>
                                 <a href="ceklogin.php">
                                         <button>
