@@ -86,7 +86,14 @@
                                                 session_start();
                                                 $nama_user=$_SESSION['username'];
                                                 $page=basename($_SERVER['PHP_SELF']);
-                                                $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                
+                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                $val = pg_fetch_result($pgsql, 0, 0);
+                                                if($val=='0')
+                                                {
+                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                }
                                             ?>
                                     </a>
                                 </span>
@@ -95,7 +102,7 @@
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageTekn(1).html">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi
+                            <a href="MainpageTekn(1).php">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi
                             </a>
                             <p>Kebijakan privasi baru WhatsApp soal pembagian data percakapan akun WhatsApp Business dengan Facebook yang berlaku mulai 15 Mei 2021 kemarin, membuat kompetitornya, Telegram "menggila".
                             </p>
