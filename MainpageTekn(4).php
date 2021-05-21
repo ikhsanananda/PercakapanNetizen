@@ -86,7 +86,14 @@
                                                 session_start();
                                                 $nama_user=$_SESSION['username'];
                                                 $page=basename($_SERVER['PHP_SELF']);
-                                                $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                
+                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                $val = pg_fetch_result($pgsql, 0, 0);
+                                                if($val=='0')
+                                                {
+                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                }
                                             ?>
                                     </a>
                                 </span>
@@ -95,7 +102,7 @@
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageTekn(4).html">WhatsApp Siapkan "Mode Menghilang", Seperti Apa?
+                            <a href="MainpageTekn(4).php">WhatsApp Siapkan "Mode Menghilang", Seperti Apa?
                             </a>
                             <p>Tahun lalu, WhatsApp merilis fitur Disappearing Messages untuk memudahkan pengguna menghemat ruang penyimpanan agar tidak banyak pesan menumpuk. Fitur ini memungkinkan pesan terhapus secara otomatis setelah tujuh hari diterima.
                             </p>
