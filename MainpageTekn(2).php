@@ -188,7 +188,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="300">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/Tekn2tele.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/Tekn3angk.png" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 16,
@@ -197,7 +197,7 @@
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(1).html">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
+                                <a href="MainpageTekn(2).html">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya</a>
                             </div>
                         </div>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="400">
@@ -235,7 +235,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="600">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/popular-post/m-blog-5.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/5G1.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17,
@@ -246,6 +246,7 @@
                             <div class="post-title">
                                 <a href="MainpageTekn(5).html">Layanan 5G Telkomsel Meluncur Sebentar Lagi?</a>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
