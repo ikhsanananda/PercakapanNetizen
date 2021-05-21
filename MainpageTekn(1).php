@@ -266,6 +266,7 @@
                                 <a href="MainpageTekn(5).html">Layanan 5G Telkomsel Meluncur Sebentar Lagi?</a>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
                         <h2>Newsletter</h2>
