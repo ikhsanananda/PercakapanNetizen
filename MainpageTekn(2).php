@@ -86,7 +86,14 @@
                                                 session_start();
                                                 $nama_user=$_SESSION['username'];
                                                 $page=basename($_SERVER['PHP_SELF']);
-                                                $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                
+                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                $val = pg_fetch_result($pgsql, 0, 0);
+                                                if($val=='0')
+                                                {
+                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                }
                                             ?>
                                     </a>
                                 </span>
@@ -95,7 +102,7 @@
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageTekn(2).html">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya
+                            <a href="MainpageTekn(2).php">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya
                             </a>
                             <p>Perusahaan roket milik miliarder Jeff Bezos, Blue Origin, tengah bersiap membawa enam turis untuk berwisata ke luar angkasa, pada Juli mendatang.
                             </p>
