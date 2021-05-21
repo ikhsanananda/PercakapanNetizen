@@ -183,7 +183,7 @@
                             </div>
 
                             <div class="post-title">
-                                <a href="MainpageTekn(1).html">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
+                                <a href="MainpageTekn(1).php">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
                             </div>
                         </div>
 
@@ -199,7 +199,7 @@
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(2).html">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya</a>
+                                <a href="MainpageTekn(2).php">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya</a>
                             </div>
                         </div>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="400">
@@ -214,7 +214,7 @@
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(3).html">Gojek dan Tokopedia Resmi Merger Menjadi GoTo</a>
+                                <a href="MainpageTekn(3).php">Gojek dan Tokopedia Resmi Merger Menjadi GoTo</a>
                             </div>
                         </div>
 
@@ -230,7 +230,7 @@
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(4).html">WhatsApp Siapkan "Mode Menghilang", Seperti Apa?</a>
+                                <a href="MainpageTekn(4).php">WhatsApp Siapkan "Mode Menghilang", Seperti Apa?</a>
                             </div>
                         </div>
 
@@ -246,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(5).html">Layanan 5G Telkomsel Meluncur Sebentar Lagi?</a>
+                                <a href="MainpageTekn(5).php">Layanan 5G Telkomsel Meluncur Sebentar Lagi?</a>
                             </div>
                         </div>
                     </div>
