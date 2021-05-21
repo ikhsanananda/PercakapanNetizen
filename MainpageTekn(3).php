@@ -75,7 +75,7 @@
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17, 2021</span>
                                 <span>
                                 <a href="ceklogin.php">
                                         <button>
@@ -161,7 +161,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/Tekn1redmi.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/Tekn2tele.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span>
@@ -173,8 +173,7 @@
                             </div>
 
                             <div class="post-title">
-                                <a href="MainpageTekn.html">Bocoran Spesifikasi Redmi Note 10s, Meluncur di Indonesia Besok
-                                </a>
+                                <a href="MainpageTekn(1).html">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
                             </div>
                         </div>
 
