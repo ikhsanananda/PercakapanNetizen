@@ -188,7 +188,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/Tekn1redmi.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/Tekn2tele.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span>
@@ -200,8 +200,7 @@
                             </div>
 
                             <div class="post-title">
-                                <a href="MainpageTekn.html">Bocoran Spesifikasi Redmi Note 10s, Meluncur di Indonesia Besok
-                                </a>
+                                <a href="MainpageTekn(1).html">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
                             </div>
                         </div>
 
