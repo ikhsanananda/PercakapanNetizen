@@ -178,7 +178,7 @@
 
                             </li>
                             <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                                <a href="#">Shopping</a>
+                                <a href="#">Education</a>
 
                             </li>
                             <li class="list-items" data-aos="fade-left" data-aos-delay="500">
