@@ -308,7 +308,9 @@
         <div class="container">
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
                 <h2>About us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis iure, autem nulla tenetur repellendus.</p>
+                <p>Asmi Devi Azizah G64190009</p>
+                <p>Muhammad Ikhsan Ananda G64190032</p>
+                <p>Ramadhanti Nisa Permanahadi G64190092</p>
             </div>
             <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
                 <h2>Newsletter</h2>
