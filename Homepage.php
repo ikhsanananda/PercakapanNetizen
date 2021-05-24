@@ -192,13 +192,6 @@
                             <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
-                    <div class="pagination flex-row">
-                        <a href="#"><i class="fas fa-chevron-left"></i></a>
-                        <a href="#" class="pages">1</a>
-                        <a href="#" class="pages">2</a>
-                        <a href="#" class="pages">3</a>
-                        <a href="#"><i class="fas fa-chevron-right"></i></a>
-                    </div>
                 </div>
                 <aside class="sidebar">
                     <div class="category">
