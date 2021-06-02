@@ -213,12 +213,6 @@
                             <a href="MainpageKes(1).php"><button class="btn post-btn">Baca &nbsp; <i class="fas fa-arrow-right"></i></button></a>
                         </div>
                     </div>
-
-                    <div class="pagination flex-row">
-                        <a href="index1.php" class="pages">1</a>
-                        <a href="index2.php" class="pages">2</a>
-                        <a href="index3.php" class="pages">3</a>
-                    </div>
                 </div>
 
                 <aside class="sidebar">
