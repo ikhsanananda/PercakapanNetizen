@@ -12,7 +12,10 @@
   <nav class="nav">
       <div class="nav-menu flex-row">
           <div class="nav-brand">
-              <a href="#" class="text-gray"><img src="./Profile/assets/logo/PN full color.png" alt="Logo PN"></a>
+              <a href="#"><picture>
+                <source srcset="./Profile/assets/logo/PN mini color.png" media="(max-width: 520px)">
+                <img src="./Profile/assets/logo/PN full color.png" alt="Logo PN">
+              </picture></a>
           </div>
           <div class="toggle-collapse">
               <div class="toggle-icons">
@@ -47,16 +50,21 @@
       <img src="./Profile/assets/IMG_20180630_234826.jpg" alt="Profile Picture">
       <h1>Nama Pengguna</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <a href="#">Edit Profil</a>
+      <a href="./profil-edit.html">Edit Profil</a>
     </div>
     <hr>
-    <div class="artikel">
-      <h1>Berita Buatan | Berita Disukai</h1>
+    <div id="artikel">
+      <div class="navigasi flex-row">
+        <a href="#artikel">Berita Buatan</a><a href="./profil-liked.html">Berita Disukai</a>
+      </div>
       <div class="news">
         <img src="./Profile/assets/Blog-post/blog1.png" alt="Gambar Artikel">
         <div class="text">
           <h2>Judul: Lorem Ipsum itu apa?</h2>
-          <p class="date">Tanggal... / Kategori...</p>
+          <div class="post-info flex-row">
+            <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
+            <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+          </div>
           <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
         </div>
       </div>
@@ -65,7 +73,10 @@
         <img src="./Profile/assets/Blog-post/blog1.png" alt="Gambar Artikel">
         <div class="text">
           <h2>Judul: Lorem Ipsum itu apa?</h2>
-          <p class="date">Tanggal... / Kategori...</p>
+          <div class="post-info flex-row">
+            <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
+            <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+          </div>
           <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
         </div>
       </div>
