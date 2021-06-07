@@ -39,9 +39,7 @@
     <nav class="nav">
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a href="index.php" class="text-gray">
-                    Percakapan Netizen
-                </a>
+                <a href="#"><img src="Homepage/assets/PN full color.png" alt="Logo"></a>
             </div>
 
             <div class="toggle-collapse">
