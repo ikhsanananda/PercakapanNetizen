@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="Homepage/assets/PN full color.png" width="400" height="400" alt="css-in-readme">
+</div>
+
 # Kelompok 14
 - Asmi Devi Azizah G64190009
 - Muhammad Ikhsan Ananda G64190032
