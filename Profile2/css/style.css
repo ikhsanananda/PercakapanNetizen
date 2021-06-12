@@ -252,6 +252,17 @@ hr {
   padding-right: 1.5rem;
 }
 
+.news .post-info .unlike {
+  background-color: #C1312D;
+  border-radius: 10%;
+  color: var(--white);
+  padding: 0vw 0.3vw;
+}
+
+.news .post-info .unlike:hover {
+  background-color: #910A29;
+}
+
 .news .post-info {
   padding-bottom:1rem;
 }
