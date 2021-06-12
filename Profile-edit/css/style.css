@@ -1,81 +1,324 @@
-<!DOCTYPE html>
-<head>
-  <title>Edit Profil | Percakapan Netizen</title>
-  <link rel="stylesheet"href="./Profile-edit/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Main Page/css/all.css">
-  <link rel="stylesheet" href="./Main Page/css/fonts.css">
-</head>
+@import url('./css/fonts.css');
 
-<body>
-  <!--nav-->
-  <nav class="nav">
-      <div class="nav-menu flex-row">
-          <div class="nav-brand">
-              <a href="#"><img src="./Profile-edit/assets/logo/PN full color.png" alt="Logo"></a>
-          </div>
-          <div class="toggle-collapse">
-              <div class="toggle-icons">
-                  <i class="fas fa-bars"></i>
-              </div>
-          </div>
-          <div>
-              <ul class="nav-items">
-                  <li class="nav-link">
-                      <a href="#">News Update</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#">Share The Story</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#">Contact Us</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+html, body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: var(--Lexend);
+}
 
-  <!--title-->
-  <div class="container">
-    <!-- <div class="header"></div> -->
-      <div class="avatar-edit">
-        <div class="avatar-now">
-          <h3>Profile Picture Sekarang</h3>
-          <img src="Profile-edit/assets/avatar/R1.png" alt="Profile Picture">
-        </div>
-        <!-- ganti avatar -->
-        <div class="change">
-          <h3>Ganti Profile Picture</h3>
-          <div class="gallery">
-              <div class="images">
-                <img src="Profile-edit/assets/avatar/B1.png" alt="Avatar1">
-                <img src="Profile-edit/assets/avatar/B2.png" alt="Avatar2">
-                <img src="Profile-edit/assets/avatar/B3.png" alt="Avatar3">
-                <img src="Profile-edit/assets/avatar/B4.png" alt="Avatar4">
-                <img src="Profile-edit/assets/avatar/B5.png" alt="Avatar5">
-                <img src="Profile-edit/assets/avatar/R1.png" alt="Avatar6">
-                <img src="Profile-edit/assets/avatar/R2.png" alt="Avatar7">
-                <img src="Profile-edit/assets/avatar/R3.png" alt="Avatar8">
-                <img src="Profile-edit/assets/avatar/R4.png" alt="Avatar9">
-                <img src="Profile-edit/assets/avatar/R5.png" alt="Avatar10">
-              </div>
-              <div class="buttons">
-                <input type="button" name="save" value="Simpan">
-              </div>
-          </div>
-        </div>
-      </div>
-      <h1>Nama Pengguna</h1>
-      <input type="text" class="name" name="name" maxlength="20">
-      <h3>Deskripsi:</h3>
-      <input type="text" class="desc" name="desc" maxlength="250">
-      <h3>Ganti E-Mail:</h3>
-      <input type="email" class="mail" name="e-mail" maxlength="250">
-      <h3>Ganti Password:</h3>
-      <p><input type="password" class="opass" name="old password" maxlength="250" placeholder="Masukan password lama"></p>
-      <p><input type="password" class="npass" name="new password" maxlength="250" placeholder="Masukan password baru"></p>
-      <p><input type="password" class="npass" name="new password" maxlength="250" placeholder="Masukan ulang password baru"></p>
-      <p><input type="submit" class="save" name="save" value="Simpan" alt="save"> <input type="submit" class="cancel" name="cancel" value="Batal" alt="Batal"></p>
-    </div>
-  <!-- </div> -->
-</body>
+:root {
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+body {
+  background-image: url('../assets/Background-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--midnight);
+}
+
+/* global*/
+a {
+  text-decoration: none;
+  color:#000;
+}
+
+ul {
+  list-style-type:none;
+}
+
+hr {
+  margin: 5vh 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container {
+  padding:4rem 4rem;
+}
+
+/*navbar*/
+.nav img {
+  height:3vw;
+}
+
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: var(--white);
+}
+
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+}
+
+.nav .social {
+    padding: 1.4rem 0
+}
+
+.nav .social i {
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover {
+    color: #a1c4cf;
+}
+
+/*berita populer*/
+.news-popular ol{
+  display:flex;
+  font-weight: bold;
+}
+
+.news-popular .left {
+  margin-right:5%;
+}
+
+.news-popular .right {
+  margin-left:5%;
+}
+
+/*profil*/
+.container {
+  background-color: white;
+  margin: 0 auto;
+  margin-top:2vw;
+  display: block;
+  width:80%;
+}
+
+.container{
+  text-align: center;
+}
+
+.container p {
+  max-width:50vw;
+  margin: 0 auto;
+}
+
+.container img {
+  border-radius: 50%;
+  width:150px;
+  height:150px;
+  object-fit: cover;
+  margin:0 auto;
+  display: block;
+}
+
+.container a {
+  text-decoration: none;
+  color:#4C5464;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2vw;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/*input html*/
+.container {
+  display: block;
+}
+
+.container input {
+  margin: 0 auto;
+}
+
+.container [type=button] {
+  margin-top: 1vw;
+}
+
+.container .name[type=text] {
+  width:20vw;
+  font-size:1.1rem;
+}
+
+.container [type=submit] {
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0vw 1vw;
+}
+
+.container .desc{
+  width:40vw;
+  height:10vw;
+  font-size:0.8rem;
+}
+
+.container [type=email] {
+  width:20vw;
+  font-size: 1.1rem;
+}
+
+.container [type=password] {
+  margin: 1vw 0vw;
+  width:20vw;
+  font-size: 1.1rem;
+}
+
+/*button ganti avatar*/
+.container .avatar-edit {
+  display: inline-flex;
+  margin-top: 0 auto;
+}
+
+.container .avatar-edit img {
+  margin-top: 4vw;
+}
+
+.container .gallery {
+  display: inline-flex;
+  justify-content: center;
+  margin: 0 auto;
+  width:42vw;
+  height:18vw;
+  padding: 1vw;
+  overflow: auto;
+}
+
+.container .gallery .opt img {
+  margin: 0.3vw;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 520px){
+  .container .header img {
+    width:80px;
+    height:80px;
+  }
+
+  .container {
+    width:100%;
+  }
+
+  .container .avatar-edit {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container .gallery {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    width:84vw;
+    height:36vw;
+    padding: 1vw;
+    overflow: auto;
+  }
+
+  .container .gallery .opt img {
+    margin: 0.3vw;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .container .name[type=text] {
+    width:50vw;
+    font-size:1.1rem;
+  }
+
+  .container .desc{
+    width:50vw;
+    height:15vw;
+  }
+
+  .container [type=email] {
+    width:50vw;
+    font-size: 1.1rem;
+  }
+
+  .container [type=password] {
+    width:50vw;
+    font-size: 1.1rem;
+  }
+
+}
