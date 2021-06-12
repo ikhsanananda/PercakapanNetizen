@@ -217,10 +217,10 @@ hr {
   margin: 0vw 1vw;
 }
 
-.container .desc[type=text] {
+.container .desc{
   width:40vw;
   height:10vw;
-  text-align: left;
+  font-size:0.8rem;
 }
 
 .container [type=email] {
@@ -245,35 +245,20 @@ hr {
 }
 
 .container .gallery {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
   margin: 0 auto;
-  text-align: center;
   width:42vw;
   height:18vw;
   padding: 1vw;
+  overflow: auto;
 }
 
-.container .gallery .images {
-  width:40vw;
-  height:20vw;
-  margin: 0 auto;
-}
-.container .gallery .images img {
+.container .gallery .opt img {
   margin: 0.3vw;
   width: 90px;
   height: 90px;
   object-fit: cover;
-  display: inline;
-}
-
-.container .gallery .images img:hover {
-  border-color: var(--midnight);
-  border-width: thin;
-}
-
-.buttons {
-  margin: 0 auto;
-  margin-top: -5vw;
 }
 
 
@@ -299,11 +284,41 @@ hr {
     margin: 0 auto;
   }
 
-  .container .gallery .images img {
+  .container .gallery {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    width:84vw;
+    height:36vw;
+    padding: 1vw;
+    overflow: auto;
+  }
+
+  .container .gallery .opt img {
     margin: 0.3vw;
     width: 50px;
     height: 50px;
     object-fit: cover;
-    display: inline;
   }
+
+  .container .name[type=text] {
+    width:50vw;
+    font-size:1.1rem;
+  }
+
+  .container .desc{
+    width:50vw;
+    height:15vw;
+  }
+
+  .container [type=email] {
+    width:50vw;
+    font-size: 1.1rem;
+  }
+
+  .container [type=password] {
+    width:50vw;
+    font-size: 1.1rem;
+  }
+
 }
