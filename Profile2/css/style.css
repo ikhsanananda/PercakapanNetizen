@@ -252,14 +252,19 @@ hr {
   padding-right: 1.5rem;
 }
 
-.news .post-info .unlike {
+.news .post-info .delete {
   background-color: #C1312D;
-  border-radius: 10%;
+  border: none;
   color: var(--white);
   padding: 0vw 0.3vw;
+  text-align: center;
+  border-radius: 10%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
 }
 
-.news .post-info .unlike:hover {
+.news .post-info .delete:hover {
   background-color: #910A29;
 }
 
