@@ -28,29 +28,52 @@
 
     <nav class="nav">
         <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#"><img src="Homepage/assets/PN full color.png" alt="Logo"></a>
-            </div>
+            <ul class="nav-img">       
+                <a href="index.php">
+                        <img src="PN full color.png" alt="Logo">
+                </a>  
+            </ul>
+
             <div class="toggle-collapse">
                 <div class="toggle-icons">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
+
             <div>
-                <ul class="nav-items">
+            <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="#">News Update</a>
+                        <a href="index.php">Berita Terkini</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Share The Story</a>
+                        <a href="ShareStory.php">Sampaikan Cerita Anda</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Contact Us</a>
+                        <a href="contact.php">Yuk Kenalan</a>
+                    </li>
+                    <li class="nav-link">
+                        <?php
+                            session_start(); 
+                            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+                            {
+                        ?>
+                                <a href="profil2.php">Berita Favorit Anda</a>
+                        <?php
+                            }
+                            else
+                            {
+                        ?>
+                                <a href="SignupLogin.php">Masuk atau Daftar</a>
+                        <?php
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
 
     <!-- ------------x---------------  Navigation --------------------------x------------------- -->
 
@@ -69,34 +92,67 @@
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17, 2021</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21, 2021</span>
                                 <span>
-                                    <a href="ceklogin.php">
-                                        <button>
-                                                <i class="far fa-heart text-gray"></i>
+                                <form action="<?php $halaman=basename($_SERVER['PHP_SELF']); echo $halaman; ?>" method="POST">                                        <button name="simpan">
+                                                <?php 
+                                                    include("config.php");
+                                                    $page=basename($_SERVER['PHP_SELF']); 
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                    ?>
+                                                            <i class="far fa-heart text-gray"></i>
+                                                    <?php    
+                                                        }
+                                                        else
+                                                       {
+                                                    ?>
+                                                            <i class="fa fa-heart"></i>
+                                                    <?php    
+                                                        }
+                                                    }
+                                                    ?>                                  
                                             </button>&nbsp;&nbsp;Like
                                             <?php
-                                                include("config.php");
-                                                session_start();
-                                                $nama_user=$_SESSION['username'];
-                                                $page=basename($_SERVER['PHP_SELF']);
-                                                
-                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
-                                            
-                                                $val = pg_fetch_result($pgsql, 0, 0);
-                                                if($val=='0')
+                                                if(isset($_POST['simpan']))
                                                 {
-                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                    include("config.php");
+                                                
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                            $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                        }
+                                                    }
                                                 }
                                             ?>
-                                    </a>
+                                    </form>
                                 </span>
-
                             </div>
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageTekn(8).php">Menerka Bentuk iPhone 13 dan iPhone 13 Pro</a>
+                        <a href="MainpageTekn(8).php">Menerka Bentuk iPhone 13 dan iPhone 13 Pro</a>
                             <p>Dari hari ke hari, bocoran tentang iPhone 13 semakin banyak bermunculan di dunia maya. Kali ini pembocor kenamaan, Jon Prosser, menampilkan desain CAD render iPhone 13 dan iPhone 13 Pro.</p>
                             <p>Sebagai informasi CAD atau computer-aided design biasanya digunakan untuk memvisualisasikan sebuah produk dalam bentuk gambar 2D maupun 3D.</p>
                             <p>Dalam video di kanal YouTube FrontPageTech, Prosser mengatakan bahwa iPhone 13 akan memiliki dimensi yang sedikit lebih tebal kerena menampung baterai lebih besar.</p>
@@ -119,138 +175,133 @@
                             <p>iPhone 13 kabarnya akan hadir dalam empat model, masing-masing memiliki diagonal garis sepanjang 5,4 inci untuk model mini, 6,1 inci untuk model reguler dan Pro, serta 6,7 inci untuk model Pro Max. iPhone 13 series akan "diotaki" chipset Bionic A15 dan koneksivitas 5G.</p>
                             <p>Sebagaimana dirangkum KompasTekno dari Macrumours, Senin (7/6/2021), kabarnya Apple mempertimbangan kehadiran sensor pemindai sidik jari di model iPhone 13 sebagai pendamping Face ID untuk sistem keamanan perangkat.</p>
                             <p>Dalam videonya, Prosser turut menyematkan tautan unduhan render iPhone 13 dan iPhone 13 Pro yang bisa diunduh. Video Prosser selengkapnya bisa dilihat di tautan berikut.</p>
-                        </div>
+                       </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
-                    <div class="category">
-                        <h2>Category</h2>
+                <div class="category">
+                <h2>Kategori Berita</h2>
                         <ul class="category-list">
                             <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                                <a href="#">Health</a>
-
+                                <a href="indexEdu.php">Edukasi</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                                <a href="#">Technology</a>
-
+                                <a href="indexFood.php">Makanan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                                <a href="#">Lifestyle</a>
-
+                                <a href="indexKes.php">Kesehatan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                                <a href="#">Education</a>
-
+                                <a href="indexTekn.php">Teknologi</a>
                             </li>
-                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                                <a href="#">Food</a>
 
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="indexLife.php">Gaya Hidup</a>
                             </li>
                         </ul>
                     </div>
                     <div class="popular-post">
-                        <h2>Popular Post</h2>
+                        <h2>Berita Terpopular</h2>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/Tekn2tele.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/ketimun.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span>
-                                        <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 16,
+                                        <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021
                                     </span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
 
                             <div class="post-title">
-                                <a href="MainpageTekn(1).php">Telegram Ajak Pengguna WhatsApp Hapus Aplikasi</a>
+                                <a href="MainpageLife(1).php">6 Kesalahan Memasak Sayuran yang Mungkin Tak Disadari</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="300">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/Tekn3angk.png" class="img" alt="blog1">
+                                    <img src="Main Page/assets/sayur.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 16,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(2).php">Wisata Luar Angkasa Gratis lewat Google Chrome, Begini Caranya</a>
+                                <a href="MainpageLife(2).php">6 Kesalahan Memasak Sayuran yang Mungkin Tak Disadari</a>
                             </div>
                         </div>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="400">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/goto1.png" class="img" alt="blog1">
+                                    <img src="Main Page/assets/casio.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(3).php">Gojek dan Tokopedia Resmi Merger Menjadi GoTo</a>
+                                <a href="MainpageLife(3).php">Casio Bikin Jam Tangan G-Shock Versi Paling Tipis, Harganya?</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="500">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/wa1.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/dog.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 18,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(4).php">WhatsApp Siapkan "Mode Menghilang", Seperti Apa?</a>
+                                <a href="MainpageLife(4).php">Apakah Anjing Punya Perasaan Bersalah?</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="600">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/5G1.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/urat.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageTekn(5).php">Layanan 5G Telkomsel Meluncur Sebentar Lagi?</a>
+                                <a href="MainpageLife(5).php">7 Gejala Asam Urat yang Tak Boleh Diabaikan</a>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
-                        <h2>Newsletter</h2>
-                        <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
-                            <button class="btn form-btn">Subscribe</button>
-                        </div>
+                        <h2>Ikuti Surat Kabar Kami</h2>
+                        <form action="email.php" method="POST">
+                            <div class="form-element">
+                                <input type="text" class="input-element" name="email" placeholder="Email">
+                                <button class="btn form-btn" name="submit">Ikuti</button>
+                            </div>
+                        </form>
                     </div>
+
                     <div class="popular-tags">
                         <h2>Popular Tags</h2>
                         <div class="tags flex-row">
-                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="200">technology</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="300">travel</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="400">illustration</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="500">design</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="600">lifestyle</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Makanan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="200">Kesehatan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="300">Teknologi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="400">Edukasi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="500">Gaya Hidup</span>
                         </div>
                     </div>
                 </aside>
@@ -271,16 +322,10 @@
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
                 <h2>About us</h2>
                 <p>Asmi Devi Azizah G64190009</p>
-                <p>Muhammad Ikhsan Ananda G64190032</p>
-                <p>Ramadhanti Nisa Permanahadi G64190092</p>
+                <p>Muhammad Ikhsan Ananda</p>
+                <p>Ramadhanti Nisa Permanahadi</p>
             </div>
-            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
-                <h2>Newsletter</h2>
-                <p>Stay update with our latest</p>
-                <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-                </div>
-            </div>
+            
         </div>
         <div class="rights flex-row">
             <h4 class="text-gray">
