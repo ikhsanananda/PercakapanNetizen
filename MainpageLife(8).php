@@ -28,29 +28,52 @@
 
     <nav class="nav">
         <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#"><img src="Homepage/assets/PN full color.png" alt="Logo"></a>
-            </div>
+            <ul class="nav-img">       
+                <a href="index.php">
+                        <img src="PN full color.png" alt="Logo">
+                </a>  
+            </ul>
+
             <div class="toggle-collapse">
                 <div class="toggle-icons">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
+
             <div>
-                <ul class="nav-items">
+            <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="#">News Update</a>
+                        <a href="index.php">Berita Terkini</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Share The Story</a>
+                        <a href="ShareStory.php">Sampaikan Cerita Anda</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Contact Us</a>
+                        <a href="contact.php">Yuk Kenalan</a>
+                    </li>
+                    <li class="nav-link">
+                        <?php
+                            session_start(); 
+                            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+                            {
+                        ?>
+                                <a href="profil2.php">Berita Favorit Anda</a>
+                        <?php
+                            }
+                            else
+                            {
+                        ?>
+                                <a href="SignupLogin.php">Masuk atau Daftar</a>
+                        <?php
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
 
     <!-- ------------x---------------  Navigation --------------------------x------------------- -->
 
@@ -71,32 +94,65 @@
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                                 <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21, 2021</span>
                                 <span>
-                                    <a href="ceklogin.php">
-                                        <button>
-                                                <i class="far fa-heart text-gray"></i>
+                                <form action="<?php $halaman=basename($_SERVER['PHP_SELF']); echo $halaman; ?>" method="POST">                                        <button name="simpan">
+                                                <?php 
+                                                    include("config.php");
+                                                    $page=basename($_SERVER['PHP_SELF']); 
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                    ?>
+                                                            <i class="far fa-heart text-gray"></i>
+                                                    <?php    
+                                                        }
+                                                        else
+                                                       {
+                                                    ?>
+                                                            <i class="fa fa-heart"></i>
+                                                    <?php    
+                                                        }
+                                                    }
+                                                    ?>                                  
                                             </button>&nbsp;&nbsp;Like
                                             <?php
-                                                include("config.php");
-                                                session_start();
-                                                $nama_user=$_SESSION['username'];
-                                                $page=basename($_SERVER['PHP_SELF']);
-                                                
-                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
-                                            
-                                                $val = pg_fetch_result($pgsql, 0, 0);
-                                                if($val=='0')
+                                                if(isset($_POST['simpan']))
                                                 {
-                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                    include("config.php");
+                                                
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                            $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                        }
+                                                    }
                                                 }
                                             ?>
-                                    </a>
+                                    </form>
                                 </span>
-
                             </div>
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageLife(8).php">Susu Dianggap Makanan Mahal, Konsumsi Susu di Indonesia Rendah</a>
+                        <a href="MainpageLife(8).php">Susu Dianggap Makanan Mahal, Konsumsi Susu di Indonesia Rendah</a>
                             <p>Susu mengandung berbagai zat gizi penting, mulai dari protein, lemak, karbohidrat, mineral, dan vitamin. Namun, konsumsi susu di Indonesia masih jauh tertinggal dibandingkan negara tetangga, apalagi negara maju.</p>
                             <p>Konsumsi susu masyarakat Indonesia hanya 16,27 kilogram per kapita per tahun. Jumlah itu termasuk terendah jika dibandingkan dengan sejumlah negara di Asia Tenggara. Bandingkan dengan Malaysia yang mencapai 36,2 kg per kapita, atau Thailand 22,2 kg per kapita.</p>
                             <p>Banyak faktor yang menyebabkan konsumsi susu di Indonesia masih jauh tertinggal dengan negara lain.</p>
@@ -113,38 +169,37 @@
                             <p>“Sumber protein yang terbaik untuk tinggi badan itu sebenarnya adalah susu. Lalu ada telur, itu setara dengan susu. Kemudian ayam dan ikan,” kata Damayanti.</p>
                             <p>Senada dengan Damayanti, Ahli Nutrisi dari Fakultas Kedokteran Universitas Indonesia Prof. Dr. dr. Saptawati Bardosono, MSc mengatakan, susu dibutuhkan untuk melengkapi asupan zat gizi yang belum terpenuhi dari makanan sehari-hari.</p>
                             <p>“Saat bayi sampai usia 24 bulan diutamakan pemberian ASI seuai anjuran WHO. Setelah 24 bulan, susu bisa dikonsumsi untuk melengkapi asupan zat gizi yang belum terpenuhi dari makanan saja,” kata Saptawati.</p>
-                        </div>
+                         </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
-                    <div class="category">
-                        <h2>Category</h2>
+                <div class="category">
+                <h2>Kategori Berita</h2>
                         <ul class="category-list">
                             <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                                <a href="#">Health</a>
-
+                                <a href="indexEdu.php">Edukasi</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                                <a href="#">Technology</a>
-
+                                <a href="indexFood.php">Makanan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                                <a href="#">Lifestyle</a>
-
+                                <a href="indexKes.php">Kesehatan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                                <a href="#">Education</a>
-
+                                <a href="indexTekn.php">Teknologi</a>
                             </li>
-                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                                <a href="#">Food</a>
 
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="indexLife.php">Gaya Hidup</a>
                             </li>
                         </ul>
                     </div>
                     <div class="popular-post">
-                        <h2>Popular Post</h2>
+                        <h2>Berita Terpopular</h2>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
@@ -155,7 +210,6 @@
                                         <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021
                                     </span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
 
@@ -172,7 +226,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -187,7 +240,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -203,7 +255,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -219,7 +270,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -227,24 +277,25 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
-                        <h2>Newsletter</h2>
-                        <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
-                            <button class="btn form-btn">Subscribe</button>
-                        </div>
+                        <h2>Ikuti Surat Kabar Kami</h2>
+                        <form action="email.php" method="POST">
+                            <div class="form-element">
+                                <input type="text" class="input-element" name="email" placeholder="Email">
+                                <button class="btn form-btn" name="submit">Ikuti</button>
+                            </div>
+                        </form>
                     </div>
+
                     <div class="popular-tags">
                         <h2>Popular Tags</h2>
                         <div class="tags flex-row">
-                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="200">technology</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="300">travel</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="400">illustration</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="500">design</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="600">lifestyle</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Makanan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="200">Kesehatan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="300">Teknologi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="400">Edukasi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="500">Gaya Hidup</span>
                         </div>
                     </div>
                 </aside>
@@ -265,16 +316,10 @@
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
                 <h2>About us</h2>
                 <p>Asmi Devi Azizah G64190009</p>
-                <p>Muhammad Ikhsan Ananda G64190032</p>
-                <p>Ramadhanti Nisa Permanahadi G64190092</p>
+                <p>Muhammad Ikhsan Ananda</p>
+                <p>Ramadhanti Nisa Permanahadi</p>
             </div>
-            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
-                <h2>Newsletter</h2>
-                <p>Stay update with our latest</p>
-                <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-                </div>
-            </div>
+            
         </div>
         <div class="rights flex-row">
             <h4 class="text-gray">
