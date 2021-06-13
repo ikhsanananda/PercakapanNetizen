@@ -28,29 +28,52 @@
 
     <nav class="nav">
         <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#"><img src="Homepage/assets/PN full color.png" alt="Logo"></a>
-            </div>
+            <ul class="nav-img">       
+                <a href="index.php">
+                        <img src="PN full color.png" alt="Logo">
+                </a>  
+            </ul>
+
             <div class="toggle-collapse">
                 <div class="toggle-icons">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
+
             <div>
-                <ul class="nav-items">
+            <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="#">News Update</a>
+                        <a href="index.php">Berita Terkini</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Share The Story</a>
+                        <a href="ShareStory.php">Sampaikan Cerita Anda</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Contact Us</a>
+                        <a href="contact.php">Yuk Kenalan</a>
+                    </li>
+                    <li class="nav-link">
+                        <?php
+                            session_start(); 
+                            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+                            {
+                        ?>
+                                <a href="profil2.php">Berita Favorit Anda</a>
+                        <?php
+                            }
+                            else
+                            {
+                        ?>
+                                <a href="SignupLogin.php">Masuk atau Daftar</a>
+                        <?php
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
 
     <!-- ------------x---------------  Navigation --------------------------x------------------- -->
 
@@ -69,34 +92,67 @@
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 22, 2021</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17, 2021</span>
                                 <span>
-                                    <a href="ceklogin.php">
-                                        <button>
-                                                <i class="far fa-heart text-gray"></i>
+                                <form action="<?php $halaman=basename($_SERVER['PHP_SELF']); echo $halaman; ?>" method="POST">                                        <button name="simpan">
+                                                <?php 
+                                                    include("config.php");
+                                                    $page=basename($_SERVER['PHP_SELF']); 
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                    ?>
+                                                            <i class="far fa-heart text-gray"></i>
+                                                    <?php    
+                                                        }
+                                                        else
+                                                       {
+                                                    ?>
+                                                            <i class="fa fa-heart"></i>
+                                                    <?php    
+                                                        }
+                                                    }
+                                                    ?>                                  
                                             </button>&nbsp;&nbsp;Like
                                             <?php
-                                                include("config.php");
-                                                session_start();
-                                                $nama_user=$_SESSION['username'];
-                                                $page=basename($_SERVER['PHP_SELF']);
-                                                
-                                                $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
-                                            
-                                                $val = pg_fetch_result($pgsql, 0, 0);
-                                                if($val=='0')
+                                                if(isset($_POST['simpan']))
                                                 {
-                                                    $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                    include("config.php");
+                                                
+                                                    if($_SESSION['loggedin']==false)
+                                                    {
+                                                        header('Location:ceklogin.php');
+                                                    }
+                                                    else
+                                                    {
+                                                        $nama_user=$_SESSION['username'];
+                                                
+                                                        $pgsql=pg_query("SELECT count(nama_halaman) FROM simpan_berita WHERE nama_halaman='$page' AND username='$nama_user'");
+                                            
+                                                        $val = pg_fetch_result($pgsql, 0, 0);
+                                                        if($val=='0')
+                                                        {
+                                                            $query=pg_query("INSERT INTO simpan_berita(username, nama_halaman) VALUEs('$nama_user', '$page')");
+                                                        }
+                                                    }
                                                 }
                                             ?>
-                                    </a>
+                                    </form>
                                 </span>
-
                             </div>
                         </div>
 
                         <div class="post-title">
-                            <a href="MainpageEdu(11).php">Segera Dibuka Pendaftaran DTKS FMOTM untuk Program KJP Plus</a>
+                        <a href="MainpageEdu(11).php">Segera Dibuka Pendaftaran DTKS FMOTM untuk Program KJP Plus</a>
                             <p>Pemprov DKI Jakarta melalui Dinas Sosial Provinsi DKI Jakarta kembali membuka pendaftaran DTKS melalui sistem FMOTM (Fakir Miskin dan Orang Tidak Mampu).</p>
                             <p>Adapun pendaftaran FMOTM bakal dibuka secara online pada 7-25 Juni 2021.</p>
                             <p>DTKS ini nantinya akan digunakan sebagai dasar pemberian program bantuan di Provinsi DKI Jakarta seperti KLJ, KPDJ, KAJ, PKH, BPNT dan program bantuan lainnya, termasuk KJP Plus dan KJMU.</p>
@@ -120,138 +176,134 @@
                             <p>3. Rumah tangga memiliki tanah/lahan dan bangunan (dengan NJOP di atas Rp 1 miliar).</p>
                             <p>4. Sumber air utama yang digunakan rumah tangga untuk minum adalah air kemasan bermerek (tidak termasuk air isi ulang).</p>
                             <p>5. Dinilai tidak miskin oleh masyarakat setempat.</p>
-                        </div>
+                         </div>
                     </div>
                 </div>
 
                 <aside class="sidebar">
-                    <div class="category">
-                        <h2>Category</h2>
+                <div class="category">
+                <h2>Kategori Berita</h2>
                         <ul class="category-list">
                             <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                                <a href="#">Health</a>
-
+                                <a href="indexEdu.php">Edukasi</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                                <a href="#">Technology</a>
-
+                                <a href="indexFood.php">Makanan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                                <a href="#">Lifestyle</a>
-
+                                <a href="indexKes.php">Kesehatan</a>
                             </li>
+
                             <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                                <a href="#">Education</a>
-
+                                <a href="indexTekn.php">Teknologi</a>
                             </li>
-                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                                <a href="#">Food</a>
 
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="indexLife.php">Gaya Hidup</a>
                             </li>
                         </ul>
                     </div>
+
                     <div class="popular-post">
-                        <h2>Popular Post</h2>
+                        <h2>Berita Terpopular</h2>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/kucing.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/bakwan.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span>
-                                        <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 16,
+                                        <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021
                                     </span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
 
                             <div class="post-title">
-                                <a href="MainpageEdu(1).php">Pakar IPB Beberkan Alasan Tidak Ada Kucing Belang Tiga Jantan</a>
+                                <a href="MainpageFood(1).php">Cara Goreng Bakwan yang Benar agar Tidak Lembek dan Serap Minyak</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="300">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/bca.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/gorpis.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 19,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 20,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageEdu(2).php">BCA Buka Beasiswa 2022 Lulusan SMA/SMK, Kuliah Gratis dan Uang Saku</a>
+                                <a href="MainpageFood(2).php">5 Cara Membuat Pisang Goreng agar Renyah Tahan Lama dan Tidak Keras</a>
                             </div>
                         </div>
                         <div class="post-content" data-aos="flip-up" data-aos-delay="400">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/nanggala.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/warkop.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 20,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageEdu(3).php">ITS Serahkan Ijazah Mahasiswa yang Gugur di KRI Nanggala-402</a>
+                                <a href="MainpageFood(3).php">Kedai Kopi Tempati Rumah Adat Usia 200 Tahun, Ada di Pematang Siantar</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="500">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/pln.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/martabak.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 22,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageEdu(4).php">Institut Teknologi PLN Buka Jalur Seleksi D3-S1 Gunakan Nilai Rapor</a>
+                                <a href="MainpageFood(4).php">5 Cara Membuat Martabak Manis Berpori yang Lembut ala Penjual</a>
                             </div>
                         </div>
 
                         <div class="post-content" data-aos="flip-up" data-aos-delay="600">
                             <div class="post-image">
                                 <div>
-                                    <img src="Main Page/assets/was.jpg" class="img" alt="blog1">
+                                    <img src="Main Page/assets/mie.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17,
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
-                                <a href="MainpageEdu(5).php">Agar WhatsApp Tak Habiskan Memori HP ala Institut Teknologi Batam</a>
+                                <a href="MainpageFood(5).php">Resep Mie Jawa Godog, Hidangan Berkuah untuk Makan Malam</a>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
-                        <h2>Newsletter</h2>
-                        <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
-                            <button class="btn form-btn">Subscribe</button>
-                        </div>
+                        <h2>Ikuti Surat Kabar Kami</h2>
+                        <form action="email.php" method="POST">
+                            <div class="form-element">
+                                <input type="text" class="input-element" name="email" placeholder="Email">
+                                <button class="btn form-btn" name="submit">Ikuti</button>
+                            </div>
+                        </form>
                     </div>
+                    
                     <div class="popular-tags">
                         <h2>Popular Tags</h2>
                         <div class="tags flex-row">
-                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="200">technology</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="300">travel</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="400">illustration</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="500">design</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="600">lifestyle</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Makanan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="200">Kesehatan</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="300">Teknologi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="400">Edukasi</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="500">gayahidup</span>
                         </div>
                     </div>
                 </aside>
@@ -272,16 +324,10 @@
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
                 <h2>About us</h2>
                 <p>Asmi Devi Azizah G64190009</p>
-                <p>Muhammad Ikhsan Ananda G64190032</p>
-                <p>Ramadhanti Nisa Permanahadi G64190092</p>
+                <p>Muhammad Ikhsan Ananda</p>
+                <p>Ramadhanti Nisa Permanahadi</p>
             </div>
-            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
-                <h2>Newsletter</h2>
-                <p>Stay update with our latest</p>
-                <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-                </div>
-            </div>
+            
         </div>
         <div class="rights flex-row">
             <h4 class="text-gray">
