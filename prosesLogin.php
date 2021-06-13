@@ -4,27 +4,37 @@ include("config.php");
 if(isset($_POST['masuk']))
 {
     extract($_POST);
+    $nama="belum login";
     $username=$_POST['username'];
     $pass=$_POST['passwordorg'];
     $pgsql=pg_query("SELECT * FROM DAFTAR_USER WHERE USERNAME='$username'");
     $result=pg_fetch_array($pgsql);
+    
+    session_start();
+    $_SESSION['loggedin']=false;
 
     //apakah berhasil
     if(($result['username']==$username)&&($result['passwordorg']==$pass))
     {
-        session_start();
+        $nama=$username;
         $_SESSION['loggedin']=true;
         $_SESSION["login_time_stamp"] = time();
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $nama;
         header('Location:ceklogin.php');
     }
     else
     {
-        echo "Username atau Password salah";
+        echo "<script>
+                window.location.href='SignupLogin.php';
+                alert('Username atau Password Salah, Silahkan Masuk kembali atau Daftar');
+            </script>";
     }
 }
 else 
 {
-    die("Akses gagal...");
+    echo "<script>
+                window.location.href='SignupLogin.php';
+                alert('Akses gagal...');
+            </script>";
 }
 ?>
