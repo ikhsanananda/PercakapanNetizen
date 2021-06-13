@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Sign-Up and Log-In Form/style.css" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sudah Memiliki Akun?</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="prosesLogin.php" method="POST" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
+                    <h2 class="title">Masuk ke Akun Anda</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="username" required="required"/>
@@ -24,25 +24,10 @@
                         <input type="password" placeholder="Password" name="passwordorg" required="required"/>
                     </div>
                     <input type="submit" value="Login" name="masuk" class="btn solid" />
-                    <p class="social-text">Or Sign in with social platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
                 </form>
 
                 <form action="prosesSignup.php" method="POST" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
+                    <h2 class="title">Daftarkan Diri Anda</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="username" required="required"/>
@@ -60,21 +45,6 @@
                         <input type="password" placeholder="Confirm Password" name="cpassword" required="required"/>
                     </div>
                     <input type="submit" class="btn" value="Sign Up" name="daftar" />
-                    <p class="social-text">Or Sign up with social platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
                 </form>
             </div>
         </div>
@@ -82,24 +52,24 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here ?</h3>
+                    <h3>Anda Belum Memiliki Akun?</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!
+                        Yuk, Bergabung bersama kami dan nikmati setiap fitunya!
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
-              Sign up
+              Daftar
             </button>
                 </div>
                 <img src="Sign-Up and Log-In Form/img/log.svg" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us ?</h3>
+                    <h3>Anda Sudah Memiliki Akun?</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
+                        Masuk ke akun anda dan nikmati petualangan anda!
                     </p>
                     <button class="btn transparent" id="sign-in-btn">
-              Sign in
+              Masuk
             </button>
                 </div>
                 <img src="Sign-Up and Log-In Form/img/register.svg" class="image" alt="" />
