@@ -38,9 +38,11 @@
 
     <nav class="nav">
         <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="indexLife.php"><img src="Homepage/assets/PN full color.png" alt="Logo"></a>
-            </div>
+        <ul class="nav-img">       
+                <a href="index.php">
+                        <img src="PN full color.png" alt="Logo">
+                </a>  
+            </ul>
 
             <div class="toggle-collapse">
                 <div class="toggle-icons">
@@ -57,7 +59,24 @@
                         <a href="ShareStory.php">Sampaikan Cerita Anda</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Yuk Kenalan</a>
+                        <a href="contact.php">Yuk Kenalan</a>
+                    </li>
+                    <li class="nav-link">
+                        <?php
+                            session_start(); 
+                            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+                            {
+                        ?>
+                                <a href="profil2.php">Berita Favorit Anda</a>
+                        <?php
+                            }
+                            else
+                            {
+                        ?>
+                                <a href="SignupLogin.php">Masuk atau Daftar</a>
+                        <?php
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
@@ -71,10 +90,10 @@
     <main>
         <!------------------------ Site Title ---------------------->
         <section class="site-title">
-            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+        <div class="site-background" data-aos="fade-up" data-aos-delay="100">
                 <h3>Berita Terkini</h3>
                 <h1>Menginspirasi Melalui Informasi</h1>
-                <a href="SignupLogin.php"><button class="btn">Berita Favorit Anda</button></a>
+                <a href="ceklogin.php"><button class="btn">Berita Favorit Anda</button></a>
             </div>
         </section>
 
@@ -207,23 +226,23 @@
                         <h2>Kategori Berita</h2>
                         <ul class="category-list">
                             <li class="list-items" data-aos="fade-left" data-aos-delay="100">
-                                <a href="edukasi.php">Edukasi</a>
+                                <a href="indexEdu.php">Edukasi</a>
                             </li>
 
                             <li class="list-items" data-aos="fade-left" data-aos-delay="200">
-                                <a href="makanan.php">Makanan</a>
+                                <a href="indexFood.php">Makanan</a>
                             </li>
 
                             <li class="list-items" data-aos="fade-left" data-aos-delay="300">
-                                <a href="kesehatan.php">Kesehatan</a>
+                                <a href="indexKes.php">Kesehatan</a>
                             </li>
 
                             <li class="list-items" data-aos="fade-left" data-aos-delay="400">
-                                <a href="teknologi.php">Teknologi</a>
+                                <a href="indexTekn.php">Teknologi</a>
                             </li>
 
                             <li class="list-items" data-aos="fade-left" data-aos-delay="500">
-                                <a href="gayahidup.php">Gaya Hidup</a>
+                                <a href="indexLife.php">Gaya Hidup</a>
                             </li>
                         </ul>
                     </div>
@@ -240,7 +259,6 @@
                                         <i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 16,
                                         2021
                                     </span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
 
@@ -257,7 +275,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 19,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -272,7 +289,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 20,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -288,7 +304,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 21,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
@@ -304,7 +319,6 @@
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;May 17,
                                         2021</span>
-                                    <span><button><a href="ceklogin.php"><i class="far fa-heart text-gray"></i></a></button>&nbsp;&nbsp;Like</span>
                                 </div>
                             </div>
                             <div class="post-title">
