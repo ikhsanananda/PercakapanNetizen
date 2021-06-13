@@ -19,11 +19,17 @@ if(isset($_POST['daftar']))
     }
     else
     {
-        die("daftar gagal atau password tidak cocok");
+        echo "<script>
+                window.location.href='SignupLogin.php';
+                alert('Daftar gagal atau password tidak cocok');
+            </script>";
     }
 }
 else 
 {
-    die("Akses gagal...");
+    echo "<script>
+                window.location.href='SignupLogin.php';
+                alert('Akses gagal...');
+            </script>";
 }
 ?>
