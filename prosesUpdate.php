@@ -14,18 +14,32 @@
             $npass=$_POST['new-password'];
             $cpass=$_POST['c-password'];
 
-            if($npass==$cpass)
+            $pgsql=pg_query("SELECT * FROM DAFTAR_USER WHERE USERNAME='$nama'");
+            $result=pg_fetch_array($pgsql);
+            $verif=password_verify($opass, $result['passwordorg']);
+
+            if($verif)
             {
-                $query=pg_query("UPDATE DAFTAR_USER SET nama_lengkap='$nama_lengkap', email='$mail', deskripsi='$desc', passwordorg='$npass', cpassword='$cpass' WHERE username='$nama'");
+                if($npass==$cpass)
+                {
+                    $query=pg_query("UPDATE DAFTAR_USER SET nama_lengkap='$nama_lengkap', email='$mail', deskripsi='$desc', passwordorg='$npass', cpassword='$cpass' WHERE username='$nama'");
+                }
+                else
+                {
+                    echo "<script>
+                    window.location.href='profil-edit.php';
+                    alert('Password tidak cocok');
+                    </script>";
+                }
+                header('Location:profil2.php');
             }
             else
             {
                 echo "<script>
-                window.location.href='profil-edit.php';
-                alert('Password tidak cocok');
-            </script>";
+                    window.location.href='profil-edit.php';
+                    alert('Password lama tidak cocok');
+                    </script>";
             }
-            header('Location:profil2.php');
         }
         else
         {
