@@ -89,6 +89,11 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 
 <b>Hardware</b>
 <ul>
+    <li>Laptop HP 245 G7</li>
+    <ul>
+        <li>AMD Ryzen 3</li>
+        <li>RAM 8 GB</li>
+        <li>AMD Radeon Vega 3 Mobile Graphics</li></ul>
     <li>Laptop Acer Aspire A514-51K</li>
     <ul>
         <li>Intel CORE i3</li>
@@ -216,6 +221,7 @@ Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai denga
 <ul>
     <li><a href="https://trello.com/invite/b/fRMg3J0a/06716d922d02e309056cff7f39932b7f/projek-rpl">Trello</a></li>
     <li><a href="https://sites.google.com/apps.ipb.ac.id/rplnews/home">G-Site</a></li>
+</ul>
 
 # Testing Test case (TC)
 <b>Positive cases</b>
