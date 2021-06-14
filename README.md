@@ -43,6 +43,11 @@
   </table>
 </div>
 
+# User Analysis
+<div align="center">
+  <img src="Homepage/assets/Screen Shot 2021-06-14 at 3.04.49 PM.png">
+</div>
+
 # Use Case Diagram
 <div align="center">
     <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
