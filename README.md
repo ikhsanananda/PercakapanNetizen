@@ -21,9 +21,14 @@
     <p>Ali Naufal Ammarullah | Muhammad Fauzan Ramadhan | Levina</p>
 </div>
 
-#Use Case Diagram
+# Use Case Diagram
 <div align="center">
-    <img src="Homepage/assets/PN full color.png" width="250" height="100" alt="css-in-readme">
+    <img src="Homepage/assets/Usecase diagram.png" width="556" height="257" alt="css-in-readme">
+</div>
+
+# Activity Diagram
+<div align="center">
+    <img src="Homepage/assets/ActivityD.png" width="617" height="727" alt="css-in-readme">
 </div>
 
 # Latar Belakang
