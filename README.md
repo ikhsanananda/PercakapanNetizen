@@ -13,6 +13,10 @@
             <li>Ramadhanti Nisa Permanahadi G64190092</li>
         </ul>
     </p>
+    <p>Asisten Praktikum</p>
+    <p>Ali Naufal Ammarullah</p>
+    <p>Muhammad Fauzan Ramadhan</p>
+    <p>Levina</p>
 </div>
 
 
