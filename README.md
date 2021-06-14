@@ -14,9 +14,7 @@
         </ul>
     </p>
     <p>Asisten Praktikum</p>
-    <p>Ali Naufal Ammarullah</p>
-    <p>Muhammad Fauzan Ramadhan</p>
-    <p>Levina</p>
+    <p>Ali Naufal Ammarullah | Muhammad Fauzan Ramadhan | Levina</p>
 </div>
 
 
