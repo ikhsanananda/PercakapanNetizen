@@ -180,7 +180,7 @@ Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
 <b>4. Profil, </b>
 Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.
 <div align="center">
-    <img src="Homepage/assets/Profil.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/like.jpeg" alt="css-in-readme">
 </div>
 
 <b>5. Edit profil, </b>
