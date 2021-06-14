@@ -14,7 +14,8 @@ if(isset($_POST['masuk']))
     $_SESSION['loggedin']=false;
 
     //apakah berhasil
-    if(($result['username']==$username)&&($result['passwordorg']==$pass))
+    $verif=password_verify($pass, $result['passwordorg']);
+    if(($result['username']==$username)&&($verif))
     {
         $nama=$username;
         $_SESSION['loggedin']=true;
