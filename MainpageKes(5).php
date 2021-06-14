@@ -153,56 +153,26 @@
 
                         <div class="post-title">
                             <a href="MainpageKes(5).php">Apakah Penderita Asma Rentan Terinfeksi Covid-19?</a>
-                            <p>Nyeri sendi atau arthritis merupakan suatu peradangan kronis pada persendian.
-                            </p>
-                            <p>Mengutip dari sebuah artikel berjudul "Arthritis", kondisi ini menyebabkan munculnya rasa nyeri pada persendian, tulang, dan bagian tubuh lainnya.
-                            </p>
-                            <p>Namun, ternyata nyeri sendi tidak selalu disebabkan oleh aktivitas fisik.
-                            </p>
-                            <p>Nyeri sendi bisa disebabkan oleh konsumsi beberapa makanan tertentu. Berikut ini beberapa makanan yang dapat menyebabkan nyeri sendi.
-                            </p>
-                            <a>1. Gula
-                            </a>
-                            <p>Membatasi asupan gula sangat penting bagi penderita nyeri sendi.
-                            </p>
-                            <p>Dalam sebuah penelitian berjudul "Diet and Rheumatoid Arthritis Symptoms: Survey Results From a Rheumatoid Arthritis Registry", dijelaskan bahwa konsumsi gula berlebih dapat memperburuk pasien nyeri sendi.
-                            </p>
-                            <p>Apalagi jenis minuman manis tertentu, seperti soda, dapat meningkatkan risiko nyeri sendi secara signifikan.
-                            </p>
-                            <p>Hal ini diungkap dalam artikel berjudul "Intake of high-fructose corn syrup sweetened soft drinks, fruit drinks and apple juice is associated with prevalent arthritis in US adults, aged 20–30 years".
-                            </p>
-                            <p>Dalam studi ini, orang dewasa berusia 20 - 30 tahun yang minum soda 5 kali seminggu memiliki risiko terkena nyeri sendi 3 kali lebih banyak.
-                            </p>
-                            <a>2. Daging merah dan olahannya</a>
-                            <p>Publikasi berjudul “Nutrition Interventions in Rheumatoid Arthritis: The Potential Use of Plant-Based Diets. A Review” menyatakan bahwa daging merah dan daging olahan dapat menyebabkan nyeri sendi.
-                            </p>
-                            <p>Sebab, makanan yang banyak mengandung daging olahan dan daging merah menunjukkan penanda inflamasi tingkat tinggi, seperti interleukin-6 (IL-6), protein C-reaktif (CRP), dan homosistein.
-                            </p>
-                            <a>3. Makanan mengandung gluten</a>
-                            <p>Gluten adalah sekelompok protein dalam gandum, barley, rye, dan triticale (persilangan antara gandum dan gandum hitam).
-                            </p>
-                            <p>Beberapa makanan yang mengandung gluten antara lain mi, roti, sereal, dan lain sebagainya.
-                            </p>
-                            <p>Beberapa penelitian menunjukkan bahwa makanan yang mengandung gluten dapat menyebabkan nyeri sendi.
-                            </p>
-                            <p>Misalnya, dalam penelitian berjudul "The Dietary Intake of Wheat and other Cereal Grains and Their Role in Inflammation" ditemukan bahwa makanan yang mengandung gluten dapat menyebabkan risiko nyeri sendi.
-                            </p>
-                            <a>4. Alkohol</a>
-                            <p>Alkohol dapat memperburuk gejala nyeri sendi sehingga konsumsinya pun harus dibatasi, bahkan dihindari sama sekali.
-                            </p>
-                            <p>Sebuah studi berjudul "Alcohol consumption as a predictor of the progression of spinal structural damage in axial spondyloarthritis: data from the Catholic Axial Spondyloarthritis COhort (CASCO)" mengungkapkan bahwa alkohol memberikan efek negatif terhadap kerusakan struktural tulang belakang.
-                            </p>
-                            <a>5. Mananan tinggi garam</a>
-                            <p>Selain gula, asupan garam berlebih juga dapat menyebabkan nyeri sendi.
-                            </p>
-                            <p>Beberapa makanan yang biasanya mengandung garam tinggi adalah udang, sup kaleng, pizza, keju, daging olahan, dan lain sebagainya.
-                            </p>
-                            <p>Penelitian terhadap tikus berjudul "Sodium Chloride Aggravates Arthritis via Th17 Polarization" menunjukkan bahwa nyeri sendi pada tikus memburuk setelah mengonsumsi makanan tinggi garam.
-                            </p>
-                            <p>Selain itu, penelitian lain berjudul "Low Salt Diet Ameliorates Collagen-Induced Arthritis" menunjukkan sebaliknya.
-                            </p>
-                            <p>Tikus yang menjalani diet garam selama 62 hari dapat menurunkan kerusakan akibat nyeri sendi.
-                            </p>
+                            <p>Banyak orang beranggapan penderita asma berisiko lebih tinggi tertular Covid-19.</p>
+                            <p>Namun, penelitian menunjukkan bahwa penderita asma tidak berisiko lebih tinggi untuk tertular virus Covid-19.</p>
+                            <p>Orang yang mengalami asma juga belum tentu berisiko mengembangkan gejala ketika mereka terjangkit Covid-19.</p>
+                            <p>Orang yang terinfeksi vius corona umumnya akan mengalami gejala seperti demam, diare, hilangnya indera penciuman dan perasa, nyeri otot, dan kelelahan.</p>
+                            <p>Penderita Covid-19 juga rentan mengalami batuk kering dan sesak nafas, dimana gejala tersebut mirip dengan gejala asma.</p>
+                            <p>Untuk membedakan mana batuk kering dan sesak nafas yang disebabkan oleh asma atau Covid, kita bisa memeriksanya saat menggunakan inhaler.</p>
+                            <p>Jika gejala terjadi karena serangan asma, penggunaan inhaler akan membuat Anda terbebas dari asma dan batuk kering.</p>
+                            <p>Namun jika gejala tidak kunjung sembuh, bisa jadi hal itu dipastikan karena Covid-19.</p>
+                            <a>Apakah asma meningkatkan risiko Covid-19?</a>
+                            <p>Tidak ada bukti bahwa asma membuat Anda berisiko lebih besar tertular Covid-19.</p>
+                            <p>Covid-19 memang memengaruhi paru-paru, begitu pula dengan asma. Jadi, jika seseorang menderita asma yang tidak terkontrol, mereka mungkin memiliki gejala Covid-19 yang lebih parah.</p>
+                            <p>Asma yang tidak terkontrol merupakan tanda adanya peradangan di paru-paru dan saluran udara sudah terganggu.</p>
+                            <p>Riset baru dalam American Journal of Respiratory and Critical Care Medicine membuktikan bahwa prosentase risiko Covid-19 yang parah dan fatal pada orang dengan asma sama saja dengan orang lain yang tak memiliki penyakit asma.</p>
+                            <p>Tapi, itu hanya terjadi selama asma terkontrol dengan baik.</p>
+                            <a>Bagaimana cara penderita asma agar tidak tertular Covid-19?</a>
+                            <p>Menurut Pusat Pengendalian dan Pencegahan Penyakit AS (CDC), menerapkan protokol kesehatan sudah cukup untuk penderita asma agar terhindar dari Covid-19.</p>
+                            <p>Menurut laporan laman Healhtline, melakukan isolasi yang ketat hanya akan membahayakan kondisi psikologis.</p>
+                            <p>Pandemi ini tak hanya menyebabkan masalah pada fisik.</p>
+                            <p>Kondisi mental juga turut kena dampak dari pandemi ini seperti depresi dan gangguan kecemasan.</p>
+                            <p>Kedua kondisi ini bisa memperparah asma. Karena itu, menerapkan protokol kesehatan sebaik mungkin sudah cukup untuk menjaga diri dari virus corona.</p>
                         </div>
                     </div>
                 </div>
