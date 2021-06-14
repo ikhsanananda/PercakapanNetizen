@@ -121,7 +121,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
         <li>Apache</li></ul>
     <li>Database</li>
     <ul>
-        <li>MySQL</li></ul>
+        <li>PostgreSQL</li></ul>
 </ul>
 
 
