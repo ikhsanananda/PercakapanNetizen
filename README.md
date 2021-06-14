@@ -3,8 +3,8 @@
 </div>
 
 <div align="center">
-    # Percakapan Netizen
-    Rekasa Perangkat Lunak P1
+    <p><b>Percakapan Netizen</b></p>
+    <p>Rekasa Perangkat Lunak P1<p>
 </div>
 
 # Kelompok 14
