@@ -128,12 +128,12 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 # Hasil dan Pembahasan
 ## Use Case Diagram
 <div align="center">
-    <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
+    <img src="Homepage/assets/usecase.png" alt="css-in-readme">
 </div>
 
 ## Activity Diagram
 <div align="center">
-    <img src="Homepage/assets/ActivityD.png" alt="css-in-readme">
+    <img src="Homepage/assets/Act.png" alt="css-in-readme">
 </div>
 
 ## Class Diagram
