@@ -126,7 +126,14 @@ Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah beri
 <div align="center">
     <img src="Homepage/assets/Screen Shot 2021-06-14 at 2.50.49 PM.png" alt="css-in-readme">
 </div>
-## Create
+
+## 1. Create
+
+Fungsi ini memungkinkan pengguna untuk daftar anggota, sign-up dan sign-in, unggah berita
+
+## 2. Read
+
+
 
 # Latar Belakang
 Rasa keingintahuan manusia terhadap informasi menjadikan media sebagai satu
