@@ -43,6 +43,10 @@
   </table>
 </div>
 
+# Spesifikasi
+
+# Hasil dan Pembahasan
+
 # User Analysis
 <div align="center">
   <img src="Homepage/assets/Screen Shot 2021-06-14 at 3.04.49 PM.png">
@@ -133,6 +137,23 @@ Fungsi ini memungkinkan pengguna untuk daftar anggota, sign-up dan sign-in, ungg
 
 <b>2. Read</b>
 
+Fungsi ini memungkinkan pengguna untuk sign-up, sign-in, dan baca berita.
+
+<b>3. Update</b>
+
+Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang diupload dan berita yang disukai.
+
+<b>2. Delete</b>
+
+Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
+
+# Hasil Implementasi
+
+Ikhsan
+
+
+
+# Lampiran
 
 
 # Latar Belakang
