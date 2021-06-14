@@ -2,6 +2,11 @@
     <img src="Homepage/assets/PN full color.png" width="250" height="100" alt="css-in-readme">
 </div>
 
+<div align="center">
+    # Percakapan Netizen
+    Rekasa Perangkat Lunak P1
+</div>
+
 # Kelompok 14
 - Asmi Devi Azizah G64190009
 - Muhammad Ikhsan Ananda G64190032
