@@ -57,7 +57,7 @@ Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyuk
 </div>
 
 ## 2. Homepage
-<p>Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia</p>
+Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia.
 <div align="center">
     <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
 </div>
@@ -68,8 +68,8 @@ Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyuk
     <img src="Homepage/assets/H3.jpeg" alt="css-in-readme">
 </div>
 
-3. Mainpage
-<p>Halaman ini menampilkan berita yang akan dibaca oleh pengguna</p>
+## 3. Mainpage
+Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
 <div align="center">
     <img src="Homepage/assets/M1.jpeg" alt="css-in-readme">
 </div>
@@ -77,20 +77,20 @@ Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyuk
     <img src="Homepage/assets/M2.jpeg" alt="css-in-readme">
 </div>
 
-4. Profil
-<p>Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.</p>
+## 4. Profil
+Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.
 <div align="center">
     <img src="Homepage/assets/Profil.jpeg" alt="css-in-readme">
 </div>
 
-5. Edit profil
-<p>Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.</p>
+## 5. Edit profil
+Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.
 <div align="center">
     <img src="Homepage/assets/edit.jpeg" alt="css-in-readme">
 </div>
 
-6. Unggah berita
-<p>Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.</p>
+## 6. Unggah berita
+Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.
 <div align="center">
     <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
 </div>
