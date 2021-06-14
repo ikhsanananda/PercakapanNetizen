@@ -242,6 +242,7 @@ Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai denga
     <li>Sampaikan berita :</li>
     <p>file tidak sesuai -> peringatan format file tidak didukung</p>
     <p>file terlalu besar -> peringatan ukuran file terlalu besar</p>
+    <p>nama antara file gambar dan cerita tidak sama -> peringatan nama kedua file tidak sama</p>
 </ul>
 
 # Saran untuk pengembangan selanjutnya
