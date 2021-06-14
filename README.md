@@ -97,7 +97,7 @@ Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah beri
 
 # Fungsi CRUD
 <div align="center">
-    <img src="Homepage/CRUD.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/CRUD.jpeg" alt="css-in-readme">
 </div>
 ## Create
 
