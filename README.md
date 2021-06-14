@@ -213,6 +213,9 @@ Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang 
 Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
 
 # Lampiran
+<ul>
+    <li><a href="https://trello.com/invite/b/fRMg3J0a/06716d922d02e309056cff7f39932b7f/projek-rpl">Trello</a>
+        <a href="https://sites.google.com/apps.ipb.ac.id/rplnews/home">G-Site</a>
 
 # Testing Test case (TC)
 <b>Positive cases</b>
