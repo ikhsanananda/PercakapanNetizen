@@ -147,12 +147,19 @@
             </div>
         </div>
         <form action="prosesUpdate.php" method="POST">
+            <?php 
+                $nama=$_SESSION['username'];
+                $profil=pg_query("SELECT * FROM DAFTAR_USER WHERE username='$nama'");
+                $val=pg_fetch_array($profil);
+                echo $nama;
+            ?>
+
             <h1>Nama Pengguna</h1>
-                <input type="text" class="name" name="name" maxlength="25">
+                <input type="text" class="name" name="name" value="<?php echo $val['nama_lengkap'];?>" maxlength="25">
             <h3>Deskripsi:</h3>
-                <textarea class="desc" name="desc" maxlength="250"></textarea>
+                <textarea class="desc" name="desc" maxlength="250"><?php echo $val['deskripsi'];?></textarea>
             <h3>Ganti E-Mail:</h3>
-                <input type="email" class="mail" name="e-mail" maxlength="250">
+                <input type="email" class="mail" name="e-mail" value="<?php echo $val['email'];?>" maxlength="250">
             <h3>Ganti Password:</h3>
             <p>
                 <input type="password" class="opass" name="old-password" maxlength="250" placeholder="Masukan password lama">
