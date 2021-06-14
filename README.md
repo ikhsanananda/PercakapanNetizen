@@ -133,7 +133,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 
 ## Activity Diagram
 <div align="center">
-    <img src="Homepage/assets/Act.png" alt="css-in-readme">
+    <img src="Homepage/assets/act.png" alt="css-in-readme">
 </div>
 
 ## Class Diagram
