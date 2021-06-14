@@ -87,36 +87,63 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
         <li>Gimp</li></ul>
 </ul>
 
+<b>Hardware</b>
+<ul>
+    <li>Laptop Acer Aspire A514-51K</li>
+    <ul>
+        <li>Intel CORE i3</li>
+        <li>RAM 4 GB</li>
+        <li>Intel HD Graphics 620</li></ul>
+</ul>
+
+<b>Tech Stack</b>
+<ul>
+    <li>Front-end</li>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li></ul>
+    <li>Back-end</li>
+    <ul>
+        <li>PHP</li></ul>
+    <li>Server</li>
+    <ul>
+        <li>Apache</li></ul>
+    <li>Database</li>
+    <ul>
+        <li>MySQL</li></ul>
+</ul>
+
 
 # Hasil dan Pembahasan
 
-# Use Case Diagram
+## Use Case Diagram
 <div align="center">
     <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
 </div>
 
-# Activity Diagram
+## Activity Diagram
 <div align="center">
     <img src="Homepage/assets/ActivityD.png" alt="css-in-readme">
 </div>
 
-# Class Diagram
+## Class Diagram
 <div align="center">
     <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
 </div>
 
-# Entity Relationship Diagram
+## Entity Relationship Diagram
 <div align="center">
     <img src="Homepage/assets/ERD.jpeg" alt="css-in-readme">
 </div>
 
-# Arsitektur sistem
+## Arsitektur sistem
 <div align="center">
     <img src="Homepage/assets/Arsitektur Sistem.jpeg" alt="css-in-readme">
 </div>
 
-# Fungsi utama
-## 1. Sign-up & Sign-in
+## Fungsi utama & Implementasi
+<b>1. Sign-up & Sign-in</b>
 Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
 <div align="center">
     <img src="Homepage/assets/SignUp.jpeg" alt="css-in-readme">
@@ -125,7 +152,7 @@ Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyuk
     <img src="Homepage/assets/SignIn.jpeg" alt="css-in-readme">
 </div>
 
-## 2. Homepage
+<b>2. Homepage</b>
 Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia.
 <div align="center">
     <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
@@ -137,7 +164,7 @@ Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Si
     <img src="Homepage/assets/H3.jpeg" alt="css-in-readme">
 </div>
 
-## 3. Mainpage
+<b>3. Mainpage</b>
 Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
 <div align="center">
     <img src="Homepage/assets/M1.jpeg" alt="css-in-readme">
@@ -146,25 +173,25 @@ Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
     <img src="Homepage/assets/M2.jpeg" alt="css-in-readme">
 </div>
 
-## 4. Profil
+<b>4. Profil</b>
 Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.
 <div align="center">
     <img src="Homepage/assets/Profil.jpeg" alt="css-in-readme">
 </div>
 
-## 5. Edit profil
+<b>5. Edit profil</b>
 Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.
 <div align="center">
     <img src="Homepage/assets/edit.jpeg" alt="css-in-readme">
 </div>
 
-## 6. Unggah berita
+<b>6. Unggah berita</b>
 Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.
 <div align="center">
     <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
 </div>
 
-# Fungsi CRUD
+## Fungsi CRUD
 <div align="center">
     <img src="Homepage/assets/Screen Shot 2021-06-14 at 2.50.49 PM.png" alt="css-in-readme">
 </div>
@@ -185,13 +212,32 @@ Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang 
 
 Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
 
-# Hasil Implementasi
-
-Ikhsan
-
-
-
 # Lampiran
+
+# Testing Test case (TC)
+<b>Positive cases</b>
+<ul>
+    <li>Daftar akun :</li>
+    <p>berhasil -> masuk ke halaman login</p>
+    <li>Masuk akun :</li>
+    <p>berhasil -> masuk ke halaman save berita</p>
+    <li>Sampaikan berita :</li>
+    <p>input file dan gambar pada fitur sampaikan berita </p>
+    <p>berhasil -> peringatan berita berhasil di unggah dan segera di verifikasi</p>
+    <li>Update profile :</li>
+    <p>berhasil -> masuk ke halaman simpan berita</p>
+</ul>
+<b>Negative cases</b>
+<ul>
+    <li>Daftar akun :</li>
+    <p>sandi konfirmasi tidak sama -> kembali di halaman daftar</p>
+    <p>email tidak valid -> kembali di halaman daftar</p>
+    <li>Login :</li>
+    <p>username atau sandi tidak valid -> tetap di halaman login</p>
+    <li>Sampaikan berita :</li>
+    <p>file tidak sesuai -> peringatan format file tidak didukung</p>
+    <p>file terlalu besar -> peringatan ukuran file terlalu besar</p>
+</ul>
 
 # Saran untuk pengembangan selanjutnya
 Web aplikasi ini bisa lebih berkembang jika dibuatkan versi aplikasinya juga, karena gawai smartphone lebih mudah dijangkau dibandingkan PC. Selain itu, ada banyak fitur interaktivitas masih bisa dikembangkan, following, dan algoritme untuk kurasi bacaan pengguna.
