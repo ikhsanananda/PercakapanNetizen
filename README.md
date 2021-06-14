@@ -94,6 +94,11 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
         <li>AMD Ryzen 3</li>
         <li>RAM 8 GB</li>
         <li>AMD Radeon Vega 3 Mobile Graphics</li></ul>
+    <li>MacBook Catalina</li>
+    <ul>
+        <li>Dual-Core Intel Core M</li>
+        <li>RAM 8 GB</li>
+        <li>Intel HD Graphics 5300 1536 MB</li></ul>
     <li>Laptop Acer Aspire A514-51K</li>
     <ul>
         <li>Intel CORE i3</li>
