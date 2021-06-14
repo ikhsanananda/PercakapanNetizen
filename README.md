@@ -48,7 +48,7 @@
 
 # Fungsi utama
 ## 1. Sign-up & Sign-in
-### Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
+Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
 <div align="center">
     <img src="Homepage/assets/SignUp.jpeg" alt="css-in-readme">
 </div>
@@ -56,7 +56,7 @@
     <img src="Homepage/assets/SignIn.jpeg" alt="css-in-readme">
 </div>
 
-2. Homepage
+## 2. Homepage
 <p>Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia</p>
 <div align="center">
     <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
