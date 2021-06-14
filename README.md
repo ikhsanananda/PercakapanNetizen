@@ -95,6 +95,12 @@ Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah beri
     <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
 </div>
 
+# Fungsi CRUD
+<div align="center">
+    <img src="Homepage/CRUD.jpeg" alt="css-in-readme">
+</div>
+## Create
+
 # Latar Belakang
 Rasa keingintahuan manusia terhadap informasi menjadikan media sebagai satu
 kebutuhan penting dalam masyarakat. Media cetak maupun online, memegang peran penting
