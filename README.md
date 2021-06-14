@@ -5,14 +5,14 @@
 <div align="center">
     <p>Rekasa Perangkat Lunak<p>
     <p>Paralel 1<p>
-    <p>Kelompok 14</p>
+    <p><b>Kelompok 14<b></p>
     <p>
         <ul>
             <li>Asmi Devi Azizah G64190009</li>
             <li>Muhammad Ikhsan Ananda G64190032</li>
             <li>Ramadhanti Nisa Permanahadi G64190092</li>
         <ul>
-    <p>
+    </p>
 </div>
 
 
