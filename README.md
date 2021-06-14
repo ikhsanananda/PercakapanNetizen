@@ -23,17 +23,17 @@
 
 # Use Case Diagram
 <div align="center">
-    <img src="Homepage/assets/Usecase diagram.png" width="556" height="257" alt="css-in-readme">
+    <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
 </div>
 
 # Activity Diagram
 <div align="center">
-    <img src="Homepage/assets/ActivityD.png" width="617" height="727" alt="css-in-readme">
+    <img src="Homepage/assets/ActivityD.png" alt="css-in-readme">
 </div>
 
 # Class Diagram
 <div align="center">
-    <img src="Homepage/assets/Class diagram.jpeg" width="730" height="407" alt="css-in-readme">
+    <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
 </div>
 
 # Latar Belakang
