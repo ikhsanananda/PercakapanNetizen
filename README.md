@@ -33,7 +33,7 @@
 
 # Class Diagram
 <div align="center">
-    <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/Class diagram.jpeg" width="730" height="407" alt="css-in-readme">
 </div>
 
 # Latar Belakang
