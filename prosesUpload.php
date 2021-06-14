@@ -25,6 +25,9 @@
         $fileActualFotoExt=strtolower(end($fileFotoExt));
         $fileActualCeritaExt=strtolower(end($fileCeritaExt));
 
+        $fileResetFotoExt=strtolower(reset($fileFotoExt));
+        $fileResetCeritaExt=strtolower(reset($fileCeritaExt));
+
         $allowedFoto=array('jpg', 'jpeg', 'png');
         $allowedCerita=array('pdf', 'doc', 'docx');
 
@@ -34,19 +37,29 @@
             {
                 if($fileFotoSize < 5000000000 && $fileCeritaSize < 5000000000)
                 {
-                    $fileFotoNameNew=uniqid('', true).".".$fileActualFotoExt;
-                    $fileCeritaNameNew=uniqid('',true).".".$fileActualCeritaExt;
+                    if($$fileResetFotoExt==$$fileResetCeritaExt)
+                    {
+                        $fileFotoNameNew=$fileFotoName.".".$fileActualFotoExt;
+                        $fileCeritaNameNew=$fileCeritaName.".".$fileActualCeritaExt;
 
-                    $fileFotoDestination='Share The Story/'.$fileFotoNameNew;
-                    $fileCeritaDestination='Share The Story/'.$fileCeritaNameNew;
+                        $fileFotoDestination='Share The Story/'.$fileFotoNameNew;
+                        $fileCeritaDestination='Share The Story/'.$fileCeritaNameNew;
 
-                    move_uploaded_file($fileFotoTmpName, $fileFotoDestination);
-                    move_uploaded_file($fileCeritaTmpName, $fileCeritaDestination);
+                        move_uploaded_file($fileFotoTmpName, $fileFotoDestination);
+                        move_uploaded_file($fileCeritaTmpName, $fileCeritaDestination);
 
-                    echo "<script>
-                window.location.href='index.php';
-                alert('Unggah Cerita Sukses! Segera Kami Verifikasi dan Publikasi');
-            </script>";
+                        echo "<script>
+                            window.location.href='index.php';
+                            alert('Unggah Cerita Sukses! Segera Kami Verifikasi dan Publikasi');
+                            </script>";
+                    }
+                    else
+                    {
+                        echo "<script>
+                            window.location.href='index.php';
+                            alert('Nama File Untuk Gambar dan Cerita Harus Sama');
+                            </script>";
+                    }
                 }
                 else
                 {
