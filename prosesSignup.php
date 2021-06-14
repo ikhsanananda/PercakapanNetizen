@@ -9,12 +9,14 @@ if(isset($_POST['daftar']))
     $pass=$_POST['passwordorg'];
     $cpass=$_POST['cpassword'];
 
-    //buat query
-    $query=pg_query("INSERT INTO daftar_user(username, email, passwordorg, cpassword) VALUEs('$username', '$email', '$pass', '$cpass')");
-
     //apakah berhasil
-    if($query==TRUE && $pass==$cpass)
+    if($pass==$cpass)
     {
+        //buat query
+        $pass=password_hash($pass, PASSWORD_DEFAULT);
+        $cpass=password_hash($cpass, PASSWORD_DEFAULT);
+
+        $query=pg_query("INSERT INTO daftar_user(username, email, passwordorg, cpassword) VALUEs('$username', '$email', '$pass', '$cpass')");
         header('Location:SignupLogin.php');
     }
     else
