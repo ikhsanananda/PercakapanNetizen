@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-    <p><b>Percakapan Netizen</b></p>
+    <title><b>Percakapan Netizen</b></title>
     <p>Rekasa Perangkat Lunak P1<p>
 </div>
 
