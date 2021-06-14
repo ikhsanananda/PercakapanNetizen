@@ -122,100 +122,100 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 
 # Hasil dan Pembahasan
 <ul>
-## Use Case Diagram
-<div align="center">
-    <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
-</div>
+    <b>Use Case Diagram</b>
+    <div align="center">
+        <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
+    </div>
 
-## Activity Diagram
-<div align="center">
-    <img src="Homepage/assets/ActivityD.png" alt="css-in-readme">
-</div>
+    <b>Activity Diagram</b>
+    <div align="center">
+        <img src="Homepage/assets/ActivityD.png" alt="css-in-readme">
+    </div>
 
-## Class Diagram
-<div align="center">
-    <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
-</div>
+    <b>Class Diagram</b>
+    <div align="center">
+        <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
+    </div>
 
-## Entity Relationship Diagram
-<div align="center">
-    <img src="Homepage/assets/ERD.jpeg" alt="css-in-readme">
-</div>
+    <b>Entity Relationship Diagram</b>
+    <div align="center">
+        <img src="Homepage/assets/ERD.jpeg" alt="css-in-readme">
+    </div>
 
-## Arsitektur sistem
-<div align="center">
-    <img src="Homepage/assets/Arsitektur Sistem.jpeg" alt="css-in-readme">
-</div>
+    <b>Arsitektur sistem</b>
+    <div align="center">
+        <img src="Homepage/assets/Arsitektur Sistem.jpeg" alt="css-in-readme">
+    </div>
 
-## Fungsi Utama & Implementasi
-<b>1. Sign-up & Sign-in</b>
-Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
-<div align="center">
-    <img src="Homepage/assets/SignUp.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/SignIn.jpeg" alt="css-in-readme">
-</div>
+    <b>Fungsi Utama & Implementasi</b>
+    <b>1. Sign-up & Sign-in</b>
+    Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
+    <div align="center">
+        <img src="Homepage/assets/SignUp.jpeg" alt="css-in-readme">
+    </div>
+    <div align="center">
+        <img src="Homepage/assets/SignIn.jpeg" alt="css-in-readme">
+    </div>
 
-<b>2. Homepage</b>
-Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia.
-<div align="center">
-    <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/H2.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/H3.jpeg" alt="css-in-readme">
-</div>
+    <b>2. Homepage</b>
+    Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia.
+    <div align="center">
+        <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
+    </div>
+    <div align="center">
+        <img src="Homepage/assets/H2.jpeg" alt="css-in-readme">
+    </div>
+    <div align="center">
+        <img src="Homepage/assets/H3.jpeg" alt="css-in-readme">
+    </div>
 
-<b>3. Mainpage</b>
-Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
-<div align="center">
-    <img src="Homepage/assets/M1.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/M2.jpeg" alt="css-in-readme">
-</div>
+    <b>3. Mainpage</b>
+    Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
+    <div align="center">
+        <img src="Homepage/assets/M1.jpeg" alt="css-in-readme">
+    </div>
+    <div align="center">
+        <img src="Homepage/assets/M2.jpeg" alt="css-in-readme">
+    </div>
 
-<b>4. Profil</b>
-Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.
-<div align="center">
-    <img src="Homepage/assets/Profil.jpeg" alt="css-in-readme">
-</div>
+    <b>4. Profil</b>
+    Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-in. Berita yang pengguna upload atau sukai akan terlihat di halaman ini. PEngguna juga dapat menghapus suatu berita dari list list dengan meklik button unlike.
+    <div align="center">
+        <img src="Homepage/assets/Profil.jpeg" alt="css-in-readme">
+    </div>
 
-<b>5. Edit profil</b>
-Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.
-<div align="center">
-    <img src="Homepage/assets/edit.jpeg" alt="css-in-readme">
-</div>
+    <b>5. Edit profil</b>
+    Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.
+    <div align="center">
+        <img src="Homepage/assets/edit.jpeg" alt="css-in-readme">
+    </div>
 
-<b>6. Unggah berita</b>
-Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.
-<div align="center">
-    <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
-</div>
+    <b>6. Unggah berita</b>
+    Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.
+    <div align="center">
+        <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
+    </div>
 
-## Fungsi CRUD
-<div align="center">
-    <img src="Homepage/assets/Screen Shot 2021-06-14 at 2.50.49 PM.png" alt="css-in-readme">
-</div>
+    <b>Fungsi CRUD</b>
+    <div align="center">
+        <img src="Homepage/assets/Screen Shot 2021-06-14 at 2.50.49 PM.png" alt="css-in-readme">
+    </div>
 
-<b>1. Create</b>
+    <b>1. Create</b>
 
-Fungsi ini memungkinkan pengguna untuk daftar anggota, sign-up dan sign-in, unggah berita
+    Fungsi ini memungkinkan pengguna untuk daftar anggota, sign-up dan sign-in, unggah berita
 
-<b>2. Read</b>
+    <b>2. Read</b>
 
-Fungsi ini memungkinkan pengguna untuk sign-up, sign-in, dan baca berita.
+    Fungsi ini memungkinkan pengguna untuk sign-up, sign-in, dan baca berita.
 
-<b>3. Update</b>
+    <b>3. Update</b>
 
-Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang diupload dan berita yang disukai.
+    Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang diupload dan berita yang disukai.
 
-<b>2. Delete</b>
+    <b>4. Delete</b>
 
-Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
+    Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
 </ul>
 # Lampiran
 <ul>
