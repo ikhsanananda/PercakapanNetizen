@@ -31,6 +31,11 @@
     <img src="Homepage/assets/ActivityD.png" width="617" height="727" alt="css-in-readme">
 </div>
 
+# Class Diagram
+<div align="center">
+    <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
+</div>
+
 # Latar Belakang
 Rasa keingintahuan manusia terhadap informasi menjadikan media sebagai satu
 kebutuhan penting dalam masyarakat. Media cetak maupun online, memegang peran penting
