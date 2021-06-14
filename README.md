@@ -5,12 +5,14 @@
 <div align="center">
     <p>Rekasa Perangkat Lunak<p>
     <p>Paralel 1<p>
+    <p>.</p>
+    <p>.</p>
     <p><b>Kelompok 14</b></p>
     <p>
         <ul>
-            <li>Asmi Devi Azizah G64190009</li>
-            <li>Muhammad Ikhsan Ananda G64190032</li>
-            <li>Ramadhanti Nisa Permanahadi G64190092</li>
+            <li>Asmi Devi Azizah G64190009 - Data Administrator</li>
+            <li>Muhammad Ikhsan Ananda G64190032 - Full-stack Developer</li>
+            <li>Ramadhanti Nisa Permanahadi G64190092 - Front-end Developer</li>
         </ul>
     </p>
     <p>.<p>
@@ -19,7 +21,10 @@
     <p>Ali Naufal Ammarullah | Muhammad Fauzan Ramadhan | Levina</p>
 </div>
 
-
+#Use Case Diagram
+<div align="center">
+    <img src="Homepage/assets/PN full color.png" width="250" height="100" alt="css-in-readme">
+</div>
 
 # Latar Belakang
 Rasa keingintahuan manusia terhadap informasi menjadikan media sebagai satu
