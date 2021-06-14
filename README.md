@@ -89,7 +89,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 
 <b>Hardware</b>
 <ul>
-    <li>Laptop HP 245 G7</li>
+    <li>Notebook PC HP 245 G7</li>
     <ul>
         <li>AMD Ryzen 3</li>
         <li>RAM 8 GB</li>
