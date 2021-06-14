@@ -23,7 +23,8 @@
 
 # User Story
 <div align="center">
-    <tr>
+  <table>
+      <tr>
     <th>User</th>
     <th>Fitur yang diinginkan dan alasan</th> 
   </tr>
@@ -39,6 +40,7 @@
     <td>Jurnalis</td>
     <td>Jika saya harus menerima berita dari orang lain, saya tidak ingin ada berita bohong yang tembus ke media untuk menjaga reputasi lembaga pers tempat saya bekerja.</td> 
   </tr>
+  </table>
 </div>
 
 # Use Case Diagram
