@@ -5,13 +5,12 @@
 <div align="center">
     <p>Rekasa Perangkat Lunak<p>
     <p>Paralel 1<p>
-    <p><p>
+    <p>Kelompok 14</p>
+    - Asmi Devi Azizah G64190009
+    - Muhammad Ikhsan Ananda G64190032
+    - Ramadhanti Nisa Permanahadi G64190092
 </div>
 
-# Kelompok 14
-- Asmi Devi Azizah G64190009
-- Muhammad Ikhsan Ananda G64190032
-- Ramadhanti Nisa Permanahadi G64190092
 
 
 # Latar Belakang
