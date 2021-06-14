@@ -165,22 +165,16 @@ Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyuk
 <b>2. Homepage, </b>
 Halaman ini dapat diakses oleh pengguna yang sudah melakukan Sign-up dan/atau Sign-in maupun belum. Disini sistem menampilkan berita dari berbagai kategori yang tersedia.
 <div align="center">
-    <img src="Homepage/assets/H1.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/H2.jpeg" alt="css-in-readme">
-</div>
-<div align="center">
-    <img src="Homepage/assets/H3.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/home.jpeg" alt="css-in-readme">
 </div>
 
 <b>3. Mainpage, </b>
 Halaman ini menampilkan berita yang akan dibaca oleh pengguna.
 <div align="center">
-    <img src="Homepage/assets/M1.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/news.jpeg" alt="css-in-readme">
 </div>
 <div align="center">
-    <img src="Homepage/assets/M2.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/newss.jpeg" alt="css-in-readme">
 </div>
 
 <b>4. Profil, </b>
@@ -192,13 +186,13 @@ Pada halaman ini sistem akan menampilkan info tentang pengguna yang sudah Sign-i
 <b>5. Edit profil, </b>
 Pengguna yang ingin memperbaharui info diri pada halaman profil dapat melakukan edit roofil.
 <div align="center">
-    <img src="Homepage/assets/edit.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/eprof.jpeg" alt="css-in-readme">
 </div>
 
 <b>6. Unggah berita, </b>
 Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah berita. Fitur ini akan menyimpan berita yang diunggah pengguna ke database admin. Apabila lolos verifikasi makan berita tersebut akan diunggah oleh admin.
 <div align="center">
-    <img src="Homepage/assets/upload.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/share.jpeg" alt="css-in-readme">
 </div>
 
 ## Fungsi CRUD
