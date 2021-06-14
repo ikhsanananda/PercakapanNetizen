@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="Homepage/assets/PN full color.png" width="400" height="100" alt="css-in-readme">
+    <img src="Homepage/assets/PN full color.png" width="250" height="100" alt="css-in-readme">
 </div>
 
 # Kelompok 14
