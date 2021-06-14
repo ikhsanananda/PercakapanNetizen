@@ -36,6 +36,16 @@
     <img src="Homepage/assets/Class diagram.jpeg" alt="css-in-readme">
 </div>
 
+# Entity Relationship Diagram
+<div align="center">
+    <img src="Homepage/assets/ERD.jpeg" alt="css-in-readme">
+</div>
+
+# Arsitektur sistem
+<div align="center">
+    <img src="Homepage/assets/Arsitektur Sistem.jpeg" alt="css-in-readme">
+</div>
+
 # Latar Belakang
 Rasa keingintahuan manusia terhadap informasi menjadikan media sebagai satu
 kebutuhan penting dalam masyarakat. Media cetak maupun online, memegang peran penting
