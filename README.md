@@ -73,7 +73,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
   </table>
 </div>
 
-# Spesifikasi teknis lingkungan pengembangan
+# Spesifikasi Teknis Lingkungan Pengembangan
 <b>Software</b>
 <ul>
     <li>Operating System (OS)</li>
@@ -121,7 +121,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 
 
 # Hasil dan Pembahasan
-
+<ul>
 ## Use Case Diagram
 <div align="center">
     <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
@@ -147,7 +147,7 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
     <img src="Homepage/assets/Arsitektur Sistem.jpeg" alt="css-in-readme">
 </div>
 
-## Fungsi utama & Implementasi
+## Fungsi Utama & Implementasi
 <b>1. Sign-up & Sign-in</b>
 Fitur Sign-up & Sign-in berfungsi bagi pengguna yang ingin mengunggah dan menyukai sebuah berita.
 <div align="center">
@@ -216,7 +216,7 @@ Fungsi ini memungkinkan pengguna untuk mengubah profil, menambahkan berita yang 
 <b>2. Delete</b>
 
 Fungsi ini memungkinkan pengguna untuk menghapus berita yang telah disukai dengan memanfaatkan tombol unlike.
-
+</ul>
 # Lampiran
 <ul>
     <li><a href="https://trello.com/invite/b/fRMg3J0a/06716d922d02e309056cff7f39932b7f/projek-rpl">Trello</a></li>
