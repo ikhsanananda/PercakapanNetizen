@@ -21,6 +21,26 @@
     <p>Ali Naufal Ammarullah | Muhammad Fauzan Ramadhan | Levina</p>
 </div>
 
+# User Story
+<div align="center">
+    <tr>
+    <th>User</th>
+    <th>Fitur yang diinginkan dan alasan</th> 
+  </tr>
+  <tr>
+    <td>Pembaca awam</td>
+    <td>Saya ingin bisa meliput berita sendiri dan dibaca oleh banyak orang, supaya orang lain tahu kejadian di sekitar saya yang menurut saya penting.</td> 
+  </tr>
+  <tr>
+    <td>Pembaca yang suka menulis berita</td>
+    <td>Saya ingin dapat membaca berita sesuai kategori topik, karena saya hanya ingin mmebaca berita dengan topik yang saya minati.</td> 
+  </tr>
+  <tr>
+    <td>Jurnalis</td>
+    <td>Jika saya harus menerima berita dari orang lain, saya tidak ingin ada berita bohong yang tembus ke media untuk menjaga reputasi lembaga pers tempat saya bekerja.</td> 
+  </tr>
+</div>
+
 # Use Case Diagram
 <div align="center">
     <img src="Homepage/assets/Usecase diagram.png" alt="css-in-readme">
@@ -97,7 +117,7 @@ Fitur Unggah berita difungsikan untuk pengguna yang inginmenggunggah sebuah beri
 
 # Fungsi CRUD
 <div align="center">
-    <img src="Homepage/assets/CRUD.jpeg" alt="css-in-readme">
+    <img src="Homepage/assets/Screen Shot 2021-06-14 at 2.50.49 PM.png" alt="css-in-readme">
 </div>
 ## Create
 
@@ -122,3 +142,6 @@ kesadaran masyarakat terkait pentingnya nilai validitas suatu informasi.
 3. Menyeleksi berita yang beredar untuk meminimalisir penyebaran berita hoax.
 4. Meningkatkan minat baca dan menulis masyarakat.
 5. Meningkatkan literasi dan kesadaran masyarakat terhadap validitas informasi.
+
+# Saran untuk pengembangan selanjutnya
+Web aplikasi ini bisa lebih berkembang jika dibuatkan versi aplikasinya juga, karena gawai smartphone lebih mudah dijangkau dibandingkan PC. Selain itu, ada banyak fitur interaktivitas masih bisa dikembangkan, following, dan algoritme untuk kurasi bacaan pengguna.
