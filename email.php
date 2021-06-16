@@ -1,4 +1,6 @@
 <?php
+include('config.php');
+
     if(isset($_POST['submit']))
     {
         $messageSubject="Selamat datang di Percakapan Netizen!";
@@ -12,7 +14,8 @@
         $body .= "From: ".$from."\r\n";
         $body .= "Email: ".$to."\r\n";
         //$body .= "Message: ".$message."\r\n";
-
+        
+        pg_query("INSERT INTO ikuti_berita VALUES ('$userEmail');");
         mail($to, $messageSubject, $message, $body);
         echo "<script>
                 window.location.href='index.php';
